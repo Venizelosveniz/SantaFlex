@@ -9,7 +9,7 @@
     <meta property="og:title" content="SantaFlex - Flex Your Gains This Holiday Season!">
     <meta property="og:description" content="Safest way to grow your portfolio this New Year!">
     <meta property="og:image" content="assets/Logo.png">
-    <meta property="og:url" content="https://yourcustomdomain.com">
+    <meta property="og:url" content="https://venizelosveniz.github.io/SantaFlex/">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,16 +19,16 @@
             color: #333;
         }
         header {
-            background: #ff4d4f;
-            color: white;
-            padding: 10px 20px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            padding: 10px 20px;
+            background: #ff4d4f;
+            color: white;
         }
         header img {
-            max-width: 60px;
+            max-width: 50px;
             height: auto;
+            margin-right: 10px;
         }
         header h1 {
             margin: 0;
@@ -36,35 +36,47 @@
             font-weight: bold;
             flex-grow: 1;
             text-align: center;
-            color: #fff;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
         .hero {
+            position: relative;
             text-align: center;
             padding: 50px 20px;
             background: url('assets/Back.png') no-repeat center center;
             background-size: cover;
-            color: black;
+            color: white;
             height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero h2, .hero p {
+            z-index: 2;
+            position: relative;
+        }
         .hero h2 {
             font-size: 3em;
             margin: 0;
-            color: #333;
-            text-shadow: 1px 1px 3px white;
         }
         .hero p {
             font-size: 1.2em;
             margin: 20px 0;
-            color: #333;
-            text-shadow: 1px 1px 3px white;
         }
         .hero .cta {
             margin-top: 20px;
+            z-index: 2;
+            position: relative;
         }
         .hero .cta a {
             display: inline-block;
@@ -90,14 +102,14 @@
             color: white;
             padding: 20px;
             text-align: center;
+            font-size: 0.9em;
         }
         @media (max-width: 600px) {
             header {
                 flex-direction: row;
-                justify-content: center;
             }
             header img {
-                margin-right: 10px;
+                margin-right: 5px;
             }
             .hero h2, .hero p {
                 font-size: 1.5em;
@@ -129,11 +141,6 @@
            joining a fun, trust-filled community. Whether you’re here to flex big or just celebrate the season, 
            SantaFlex is the easiest way to spread holiday cheer while watching your investment grow. 
            Don’t miss out—grab your tokens now and let’s flex into 2025 together!</p>
-    </section>
-    <section id="buy">
-        <h2>Buy SantaFlex Now</h2>
-        <p>Get your SantaFlex tokens today and start growing your portfolio!</p>
-        <a href="https://phantom.app/tokens/solana/4HvPU52GtQP79fYWCjAv22HYrEmKHinPPb4wTiiXpump?referralId=ifb61849bz" class="cta" target="_blank" aria-label="Buy on Phantom">Buy on Phantom</a>
     </section>
     <footer>
         <p>&copy; 2024 SantaFlex. All rights reserved.</p>
