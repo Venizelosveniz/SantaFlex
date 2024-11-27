@@ -11,6 +11,11 @@
     <meta property="og:image" content="assets/Logo.png">
     <meta property="og:url" content="https://venizelosveniz.github.io/SantaFlex/">
     <style>
+        @keyframes flashing {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -18,11 +23,26 @@
             background: #f8f9fa;
             color: #333;
         }
+        .token-address {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff4d4f;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            animation: flashing 1.5s infinite;
+            z-index: 1000;
+        }
         header {
             display: flex;
             align-items: center;
             padding: 15px 20px;
-            background: #ff4d4f; /* Header in vibrant red */
+            background: #ff4d4f;
             color: white;
         }
         header img {
@@ -60,7 +80,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
         .hero h2, .hero p {
@@ -103,7 +123,7 @@
         .hero .cta a:hover {
             transform: scale(1.1);
             box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
-            background: #d43c3c; /* Slightly darker red for hover effect */
+            background: #d43c3c;
         }
         .hero .details {
             margin-top: 30px;
@@ -147,6 +167,7 @@
     </style>
 </head>
 <body>
+    <div class="token-address">Token Address: 4HvPU52GtQP79fYWCjAv22HYrEmKHinPPb4wTiiXpump</div>
     <header>
         <img src="assets/Logo.png" alt="SantaFlex Logo">
         <h1>SantaFlex</h1>
@@ -155,7 +176,7 @@
         <h2>Flex Your Gains This Holiday Season!</h2>
         <p>The safest, most festive way to grow your portfolio this New Year.</p>
         <div class="cta">
-            <a href="https://phantom.app/tokens/solana/4HvPU52GtQP79fYWCjAv22HYrEmKHinPPb4wTiiXpump?referralId=ifb61849bz" target="_blank" aria-label="Buy Tokens Now">Buy Tokens Now</a>
+            <a href="https://phantom.app/tokens/solana/4HvPU52GtQP79fYWCjAv22HYrEmKHinPPb4wTiiXpump" target="_blank" aria-label="Buy Tokens Now">Buy Tokens Now</a>
             <a href="https://x.com/SantaFlexSFX?s=09" target="_blank" aria-label="Join the Community">Join the Community</a>
         </div>
         <div class="details">
