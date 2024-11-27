@@ -29,14 +29,18 @@
             right: 20px;
             background: #ff4d4f;
             color: white;
-            font-size: 1em;
+            font-size: 0.9em; /* Smaller size */
             font-weight: bold;
-            padding: 10px 15px;
+            padding: 8px 12px;
             border-radius: 8px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             animation: flashing 1.5s infinite;
             z-index: 1000;
             text-align: center;
+            cursor: pointer;
+        }
+        .token-address:hover {
+            background: #d43c3c;
         }
         .token-address small {
             font-size: 0.8em;
@@ -168,8 +172,8 @@
                 text-align: center;
             }
             .token-address {
-                font-size: 0.9em;
-                padding: 8px 12px;
+                font-size: 0.8em;
+                padding: 8px 10px;
                 bottom: 10px;
                 right: 10px;
             }
@@ -208,7 +212,22 @@
            SantaFlex is the easiest way to spread holiday cheer while watching your investment grow. 
            Don’t miss out—grab your tokens now and let’s flex into 2025 together!</p>
     </section>
-    <div class="token-address">
+    <div class="token-address" onclick="copyToken()">
         Token Address: 4HvPU52GtQP79fYWCjAv22HYrEmKHinPPb4wTiiXpump
-        <small>Copy this to access SantaFlex tokens!</small>
-    </div
+        <small>Click to Copy</small>
+    </div>
+    <footer>
+        <p>&copy; 2024 SantaFlex. All rights reserved.</p>
+    </footer>
+    <script>
+        function copyToken() {
+            const token = "4HvPU52GtQP79fYWCjAv22HYrEmKHinPPb4wTiiXpump";
+            navigator.clipboard.writeText(token).then(() => {
+                alert("Token Address Copied!");
+            }).catch(() => {
+                alert("Failed to Copy Token Address!");
+            });
+        }
+    </script>
+</body>
+</html>
